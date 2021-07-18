@@ -5,7 +5,6 @@
 .icon-nav {
     height: 50px;
     width: 50px;
-    /* margin-left: 85px; */
 }
 
 .txt-marinho {
@@ -24,13 +23,13 @@
     text-decoration: none;
 }
 
-.input-style {
+/* .input-style {
     width: 380px;
     height: 45px;
-}
+} */
 
 .lupa {
-  color: #ffcab1;
+  color: #ffffff;
 }
 
 .dropdown-menu {
@@ -38,12 +37,13 @@
     background-color: #6DD3CE;
 }
 
-.dropdown-item {
+a.dropdown-item {
     background-color: #6DD3CE;
-    color: #BAF2E9;
+    color: #ffffff;
+    font-size: 15px;
 }
 
-.dropdown-item:hover {
+a.dropdown-item:hover {
     background-color: #95DCD1;
 }
 
@@ -55,13 +55,13 @@ li {
     list-style-type: none;
 }
 
-a:active {
+/* a:active {
     color: #BAF2E9;
 }
 
 a:visited {
     color: #BAF2E9;
-}
+} */
 
 a {
     cursor: pointer;

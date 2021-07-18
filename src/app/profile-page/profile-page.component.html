@@ -33,7 +33,6 @@
                                 <img src="{{usuario.urlImage}}" alt="..." width="155" class="img-fluid rounded-circle mt-5 mb-2 text-center">
                                 <a [routerLink]="['/user-edit', idUser]" class="btn-profile btn-sm btn-block active">Editar
                                     perfil</a>
-                                <p class="small mb-4"> <i class="mr-2"></i> {{usuario.gender}}</p>
                             </div>
                             <div class="pt-5 justify-content-center text-dark">
                                 <h4 class="mt-0 mb-0">{{usuario.name}}</h4>
@@ -78,11 +77,11 @@
                                     <div class="card-body bg-postagem borderline">
                                         <div>
                                             <div class="row">
-                                                <div class="col-md-4 d-flex justify-content-start align-items-center">
+                                                <div class="col-md-8 d-flex justify-content-start align-items-center">
                                                     <img class="rounded-circle img-fluid mr-3" src="{{usuario.urlImage}}" style="width: 50px;height: 50px;" alt="foto-perfil-usuario">
                                                     <a routerLink="/profile" class="nome-post"><b>{{usuario.name}}</b></a>
                                                 </div>
-                                                <div class="col-md-8 d-flex justify-content-end align-items-center">
+                                                <div class="col-md-4 d-flex justify-content-end align-items-center">
                                                     <button (click)='idPostEdit(postsUser.idPost)' class="btn-editar mr-2 bg-postagem" data-toggle="modal" data-target="#editarPostagem"><i
                                                             class="fa fa-pencil-square-o editar" aria-hidden="true"></i>
                                                     </button>
@@ -123,7 +122,7 @@
                                     </p>
                                 </div>
                                 <div class="collapse show" id="commentsUser">
-                                    <div *ngFor='let comentarios of postsUser.comment | orderBy : key : reverse' class="mb-2">
+                                    <div *ngFor='let comentarios of postsUser.comment | orderBy : key : reverso' class="mb-2">
                                         <div class="card-body borderline bg-postagem mx-5">
                                             <img class="mr-3 rounded-circle img-fluid" src="{{comentarios.userComment.urlImage}}" style="width: 50px;height: 50px;" alt="foto-perfil-usuario">
                                             <a routerLink="/profile" class="nome-post"><b>{{comentarios.userComment.name}}</b></a>
