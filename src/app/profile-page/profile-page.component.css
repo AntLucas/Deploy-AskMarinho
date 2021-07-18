@@ -49,10 +49,22 @@ a.maoe-style:hover {
     margin-left: 66px;
 }
 
+a.nome-post{
+    font-size: 15px;
+    font-family: Roboto;
+    text-decoration: none;
+}
+
 a.nome-post:visited {
     color: #929393;
-    font-size: 20px;
-    font-family: Roboto;
+}
+
+a.nome-post:link {
+    color: #929393;
+}
+
+a.nome-post:hover {
+    color: #6dd3c3;
 }
 
 .btn-profile {
