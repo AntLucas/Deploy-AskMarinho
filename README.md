@@ -175,6 +175,9 @@ $ ng serve
 
 </div>
   
+  <hr>
+  
+  <a href="https://antlucas.github.io/doc-askMarinho/" target="_blank"> Documentação do Angular <a/>
    
   <hr>
 
