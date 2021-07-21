@@ -4,7 +4,7 @@
 
             <!-- TABELAS TAGS -->
 
-            <div class="">
+            <div>
                 <div class="col-md-3 w-100">
                     <div class="tag-style">
                         <ul class="py-3 px-2 text-center list-style">
@@ -33,6 +33,7 @@
                                 <img src="{{usuario.urlImage}}" alt="..." width="155" class="img-fluid rounded-circle mt-5 mb-2 text-center">
                                 <a [routerLink]="['/user-edit', idUser]" class="btn-profile btn-sm btn-block active">Editar
                                     perfil</a>
+                                <p class="small mb-4"> <i class="mr-2"></i> {{usuario.gender}}</p>
                             </div>
                             <div class="pt-5 justify-content-center text-dark">
                                 <h4 class="mt-0 mb-0">{{usuario.name}}</h4>
@@ -102,15 +103,13 @@
                                         <div class="row">
                                             <div class="col-md-12 d-flex justify-content-center">
 
-                                                <a (click)='upvotePost(postsUser.idPost)' class="maoe-style mr-4">{{postsUser.userUpvotePost.length}}<i
-                                                        class="fa fa-heart" aria-hidden="true" id="maoe"></i></a>
+                                                <a (click)='upvotePost(postsUser.idPost)' class="maoe-style mr-4">{{postsUser.userUpvotePost.length}}  <i class="fa fa-heart" aria-hidden="true" id="maoe"></i></a>
 
                                                 <a (click)="chamou(postsUser.idPost)" class="comment-style mr-4"><i
                                                         class="fa fa-comment-o" aria-hidden="true" id="maoe"
                                                         data-toggle="modal" data-target="#comentado"></i></a>
 
-                                                <a (click)='reportPost(postsUser.idPost)' id="maoe" class="warning-style">{{postsUser.userReportPost.length}}<i
-                                                        class="fa fa-exclamation-triangle" aria-hidden="true"></i></a>
+                                                <a (click)='reportPost(postsUser.idPost)' id="maoe" class="warning-style">{{postsUser.userReportPost.length}}  <i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -136,11 +135,9 @@
                                             <hr>
                                             <div class="row">
                                                 <div class="col-md-12 d-flex justify-content-center">
-                                                    <a (click)='upvoteComment(comentarios.idComment)' class="maoe-style mr-4">{{comentarios.userUpvoteComment.length}}<i
-                                                            class="fa fa-heart" aria-hidden="true" id="maoe"></i></a>
+                                                    <a (click)='upvoteComment(comentarios.idComment)' class="maoe-style mr-4">{{comentarios.userUpvoteComment.length}} <i class="fa fa-heart" aria-hidden="true" id="maoe"></i></a>
 
-                                                    <a (click)='reportComment(comentarios.idComment)' id="maoe" class="warning-style">{{comentarios.userReportComment.length}}<i
-                                                            class="fa fa-exclamation-triangle"
+                                                    <a (click)='reportComment(comentarios.idComment)' id="maoe" class="warning-style">{{comentarios.userReportComment.length}}  <i class="fa fa-exclamation-triangle"
                                                             aria-hidden="true"></i></a>
                                                 </div>
                                             </div>
@@ -156,7 +153,7 @@
 
                         <div class="tab-pane fade mt-5 mb-5 w-100" id="nav-comentarios" role="tabpanel" aria-labelledby="nav-comentarios-tab">
                             <div *ngFor='let comments of commentsUsuario | orderBy : key : reverse' class="card mb-5 borderline bg-postagem">
-                                <h3 class="text-center">Postagem</h3>
+                                <h3 class="text-center nav-comments-title mt-4">Postagem</h3>
 
                                 <div>
                                     <div class="card-body bg-postagem borderline">
@@ -183,15 +180,13 @@
                                         <div class="row">
                                             <div class="col-md-12 d-flex justify-content-center">
 
-                                                <a (click)='upvotePost(comments.post.idPost)' class="maoe-style mr-4">{{comments.post.userUpvotePost.length}}<i
-                                                        class="fa fa-heart" aria-hidden="true" id="maoe"></i></a>
+                                                <a (click)='upvotePost(comments.post.idPost)' class="maoe-style mr-4">{{comments.post.userUpvotePost.length}}  <i class="fa fa-heart" aria-hidden="true" id="maoe"></i></a>
 
                                                 <a (click)="chamou(comments.post.idPost)" class="comment-style mr-4"><i
                                                         class="fa fa-comment-o" aria-hidden="true" id="maoe"
                                                         data-toggle="modal" data-target="#comentado"></i></a>
 
-                                                <a (click)='reportPost(comments.post.idPost)' id="maoe" class="warning-style">{{comments.post.userReportPost.length}}<i
-                                                        class="fa fa-exclamation-triangle" aria-hidden="true"></i></a>
+                                                <a (click)='reportPost(comments.post.idPost)' id="maoe" class="warning-style">{{comments.post.userReportPost.length}}  <i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a>
 
                                             </div>
                                         </div>
@@ -215,11 +210,9 @@
 
                                     <div class="row">
                                         <div class="col-md-12 d-flex justify-content-center">
-                                            <a (click)='upvoteComment(comments.idComment)' class="maoe-style mr-4">{{comments.userUpvoteComment.length}}<i
-                                                    class="fa fa-heart" aria-hidden="true" id="maoe"></i></a>
+                                            <a (click)='upvoteComment(comments.idComment)' class="maoe-style mr-4">{{comments.userUpvoteComment.length}}  <i class="fa fa-heart" aria-hidden="true" id="maoe"></i></a>
 
-                                            <a (click)='reportComment(comments.idComment)' id="maoe" class="warning-style">{{comments.userReportComment.length}}<i
-                                                    class="fa fa-exclamation-triangle" aria-hidden="true"></i></a>
+                                            <a (click)='reportComment(comments.idComment)' id="maoe" class="warning-style">{{comments.userReportComment.length}}  <i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a>
                                         </div>
                                     </div>
                                     <hr>
@@ -251,7 +244,7 @@
 
                                     <h5 class="card-title text-center">{{tema.tagName}}</h5>
 
-                                    <button (click)='idTagFavorita(tema.idTag)' class="btn btn-danger" data-toggle="modal" data-target="#removeTag">Remover</button>
+                                    <button (click)='idTagFavorita(tema.idTag)' class="btn fechar" data-toggle="modal" data-target="#removeTag">Remover</button>
 
                                 </div>
                             </div>
@@ -307,7 +300,7 @@
 
                     <div class="form-group">
                         <label for="" class="label-modal">Descrição</label>
-                        <input [(ngModel)]='postagemEditada.description' minlength="3" maxlength="500" class="form-control" type="text">
+                        <textarea [(ngModel)]='postagemEditada.description' minlength="3" maxlength="500" class="form-control borderInput" id="exampleFormControlTextarea1" rows="4" placeholder="Escreva sua postagem"></textarea>
                     </div>
                     <div class="form-group">
                         <label for="" class="label-modal">Tags da postagem</label>
@@ -388,7 +381,7 @@
 
                     <div class="form-group">
                         <label for="" class="label-modal">Texto</label>
-                        <input [(ngModel)]='commentModif.text' minlength="1" maxlength="155" type="text" class="form-control" placeholder="Comentário">
+                        <textarea [(ngModel)]='commentModif.text' class="form-control borderInput" minlength="1" maxlength="155" id="exampleFormControlTextarea1" rows="3" placeholder="Comentário"></textarea>
                     </div>
 
                 </div>
@@ -447,7 +440,7 @@
 
                 </div>
                 <div *ngIf='tagChamada()' class="modal-body">
-                    <div class="form-group">
+                    <div class="form-group text-white">
                         <p><b>#{{tagDelete.tagName}}</b></p>
                     </div>
                     <div class="form-group">
